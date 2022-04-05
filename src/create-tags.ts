@@ -1,5 +1,5 @@
+import * as crypto from "crypto";
 import { Stack } from "aws-cdk-lib";
-import { makeUniqueId } from "aws-cdk-lib/core/lib/private/uniqueid";
 import { AwsCustomResource, AwsCustomResourcePolicy, PhysicalResourceId } from "aws-cdk-lib/custom-resources";
 import { Construct } from "constructs";
 
@@ -55,12 +55,26 @@ export class CreateTags extends Construct {
             return { Key: tag.key, Value: tag.value };
           }),
         },
-        physicalResourceId: PhysicalResourceId.of(makeUniqueId(resourceIds)),
+        physicalResourceId: PhysicalResourceId.of(this.makeUniqueId(resourceIds)),
       },
       installLatestAwsSdk: false,
       policy: AwsCustomResourcePolicy.fromSdkCalls({
         resources: AwsCustomResourcePolicy.ANY_RESOURCE,
       }),
     });
+  }
+
+  private makeUniqueId(resourceIds: string[]) {
+    const human = resourceIds
+      .map((s) => {
+        return s.replace(/[^A-Za-z0-9]/g, "");
+      })
+      .join("")
+      .slice(0, 240);
+
+    const md5 = crypto.createHash("md5").update(resourceIds.join("")).digest("hex");
+    const hash = md5.slice(0, 8).toUpperCase();
+
+    return human + hash;
   }
 }

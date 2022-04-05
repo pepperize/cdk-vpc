@@ -78,7 +78,7 @@ Object {
               Object {
                 "Ref": "AWS::Region",
               },
-              "\\",\\"parameters\\":{\\"Resources\\":[\\"subnet-0a4b64097b272baeD\\"],\\"Tags\\":[{\\"Key\\":\\"kubernetes.io/role/internal-elb\\",\\"Value\\":\\"1\\"}]},\\"physicalResourceId\\":{\\"id\\":\\"subnet0a4b64097b272baeD\\"}}",
+              "\\",\\"parameters\\":{\\"Resources\\":[\\"subnet-0a4b64097b272baeD\\"],\\"Tags\\":[{\\"Key\\":\\"kubernetes.io/role/internal-elb\\",\\"Value\\":\\"1\\"}]},\\"physicalResourceId\\":{\\"id\\":\\"subnet0a4b64097b272baeD017FE5B5\\"}}",
             ],
           ],
         },
