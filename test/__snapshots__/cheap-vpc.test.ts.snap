@@ -1,0 +1,430 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheapVpc Should match snapshot 1`] = `
+Object {
+  "Parameters": Object {
+    "BootstrapVersion": Object {
+      "Default": "/cdk-bootstrap/hnb659fds/version",
+      "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]",
+      "Type": "AWS::SSM::Parameter::Value<String>",
+    },
+  },
+  "Resources": Object {
+    "CheapVpc2197A40E": Object {
+      "Properties": Object {
+        "CidrBlock": "10.0.0.0/16",
+        "EnableDnsHostnames": true,
+        "EnableDnsSupport": true,
+        "InstanceTenancy": "default",
+        "Tags": Array [
+          Object {
+            "Key": "Name",
+            "Value": "Network/CheapVpc",
+          },
+        ],
+      },
+      "Type": "AWS::EC2::VPC",
+    },
+    "CheapVpcIGWF93802F9": Object {
+      "Properties": Object {
+        "Tags": Array [
+          Object {
+            "Key": "Name",
+            "Value": "Network/CheapVpc",
+          },
+        ],
+      },
+      "Type": "AWS::EC2::InternetGateway",
+    },
+    "CheapVpcNatRole7B8A20E8": Object {
+      "Properties": Object {
+        "AssumeRolePolicyDocument": Object {
+          "Statement": Array [
+            Object {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": Object {
+                "Service": "ec2.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "Tags": Array [
+          Object {
+            "Key": "Name",
+            "Value": "Network/CheapVpc",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "CheapVpcNatSecurityGroupC6DDE8F1": Object {
+      "Properties": Object {
+        "GroupDescription": "Security Group for NAT instances",
+        "SecurityGroupEgress": Array [
+          Object {
+            "CidrIp": "0.0.0.0/0",
+            "Description": "Allow all outbound traffic by default",
+            "IpProtocol": "-1",
+          },
+        ],
+        "SecurityGroupIngress": Array [
+          Object {
+            "CidrIp": "0.0.0.0/0",
+            "Description": "from 0.0.0.0/0:ALL TRAFFIC",
+            "IpProtocol": "-1",
+          },
+        ],
+        "Tags": Array [
+          Object {
+            "Key": "Name",
+            "Value": "Network/CheapVpc",
+          },
+        ],
+        "VpcId": Object {
+          "Ref": "CheapVpc2197A40E",
+        },
+      },
+      "Type": "AWS::EC2::SecurityGroup",
+    },
+    "CheapVpcPrivateSubnet1DefaultRoute5459CCBE": Object {
+      "Properties": Object {
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "InstanceId": Object {
+          "Ref": "CheapVpcPublicSubnet1NatInstance3FA94076",
+        },
+        "RouteTableId": Object {
+          "Ref": "CheapVpcPrivateSubnet1RouteTable4B642956",
+        },
+      },
+      "Type": "AWS::EC2::Route",
+    },
+    "CheapVpcPrivateSubnet1RouteTable4B642956": Object {
+      "Properties": Object {
+        "Tags": Array [
+          Object {
+            "Key": "Name",
+            "Value": "Network/CheapVpc/PrivateSubnet1",
+          },
+        ],
+        "VpcId": Object {
+          "Ref": "CheapVpc2197A40E",
+        },
+      },
+      "Type": "AWS::EC2::RouteTable",
+    },
+    "CheapVpcPrivateSubnet1RouteTableAssociationAD62EE93": Object {
+      "Properties": Object {
+        "RouteTableId": Object {
+          "Ref": "CheapVpcPrivateSubnet1RouteTable4B642956",
+        },
+        "SubnetId": Object {
+          "Ref": "CheapVpcPrivateSubnet1SubnetB1FF0682",
+        },
+      },
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+    },
+    "CheapVpcPrivateSubnet1SubnetB1FF0682": Object {
+      "Properties": Object {
+        "AvailabilityZone": "dummy1a",
+        "CidrBlock": "10.0.128.0/18",
+        "MapPublicIpOnLaunch": false,
+        "Tags": Array [
+          Object {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "Private",
+          },
+          Object {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Private",
+          },
+          Object {
+            "Key": "Name",
+            "Value": "Network/CheapVpc/PrivateSubnet1",
+          },
+        ],
+        "VpcId": Object {
+          "Ref": "CheapVpc2197A40E",
+        },
+      },
+      "Type": "AWS::EC2::Subnet",
+    },
+    "CheapVpcPrivateSubnet2DefaultRoute5927D87C": Object {
+      "Properties": Object {
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "InstanceId": Object {
+          "Ref": "CheapVpcPublicSubnet1NatInstance3FA94076",
+        },
+        "RouteTableId": Object {
+          "Ref": "CheapVpcPrivateSubnet2RouteTable03B5DFAD",
+        },
+      },
+      "Type": "AWS::EC2::Route",
+    },
+    "CheapVpcPrivateSubnet2RouteTable03B5DFAD": Object {
+      "Properties": Object {
+        "Tags": Array [
+          Object {
+            "Key": "Name",
+            "Value": "Network/CheapVpc/PrivateSubnet2",
+          },
+        ],
+        "VpcId": Object {
+          "Ref": "CheapVpc2197A40E",
+        },
+      },
+      "Type": "AWS::EC2::RouteTable",
+    },
+    "CheapVpcPrivateSubnet2RouteTableAssociationD29982C0": Object {
+      "Properties": Object {
+        "RouteTableId": Object {
+          "Ref": "CheapVpcPrivateSubnet2RouteTable03B5DFAD",
+        },
+        "SubnetId": Object {
+          "Ref": "CheapVpcPrivateSubnet2Subnet4C564368",
+        },
+      },
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+    },
+    "CheapVpcPrivateSubnet2Subnet4C564368": Object {
+      "Properties": Object {
+        "AvailabilityZone": "dummy1b",
+        "CidrBlock": "10.0.192.0/18",
+        "MapPublicIpOnLaunch": false,
+        "Tags": Array [
+          Object {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "Private",
+          },
+          Object {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Private",
+          },
+          Object {
+            "Key": "Name",
+            "Value": "Network/CheapVpc/PrivateSubnet2",
+          },
+        ],
+        "VpcId": Object {
+          "Ref": "CheapVpc2197A40E",
+        },
+      },
+      "Type": "AWS::EC2::Subnet",
+    },
+    "CheapVpcPublicSubnet1DefaultRoute8AFA21B1": Object {
+      "DependsOn": Array [
+        "CheapVpcVPCGW9191E736",
+      ],
+      "Properties": Object {
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "GatewayId": Object {
+          "Ref": "CheapVpcIGWF93802F9",
+        },
+        "RouteTableId": Object {
+          "Ref": "CheapVpcPublicSubnet1RouteTable2E51E6BB",
+        },
+      },
+      "Type": "AWS::EC2::Route",
+    },
+    "CheapVpcPublicSubnet1NatInstance3FA94076": Object {
+      "DependsOn": Array [
+        "CheapVpcNatRole7B8A20E8",
+      ],
+      "Properties": Object {
+        "AvailabilityZone": "dummy1a",
+        "IamInstanceProfile": Object {
+          "Ref": "CheapVpcPublicSubnet1NatInstanceInstanceProfile491E4DBB",
+        },
+        "ImageId": "ami-1234",
+        "InstanceType": "t3.nano",
+        "SecurityGroupIds": Array [
+          Object {
+            "Fn::GetAtt": Array [
+              "CheapVpcNatSecurityGroupC6DDE8F1",
+              "GroupId",
+            ],
+          },
+        ],
+        "SourceDestCheck": false,
+        "SubnetId": Object {
+          "Ref": "CheapVpcPublicSubnet1Subnet1C126D5A",
+        },
+        "Tags": Array [
+          Object {
+            "Key": "Name",
+            "Value": "Network/CheapVpc/PublicSubnet1/NatInstance",
+          },
+        ],
+        "UserData": Object {
+          "Fn::Base64": "#!/bin/bash",
+        },
+      },
+      "Type": "AWS::EC2::Instance",
+    },
+    "CheapVpcPublicSubnet1NatInstanceInstanceProfile491E4DBB": Object {
+      "Properties": Object {
+        "Roles": Array [
+          Object {
+            "Ref": "CheapVpcNatRole7B8A20E8",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::InstanceProfile",
+    },
+    "CheapVpcPublicSubnet1RouteTable2E51E6BB": Object {
+      "Properties": Object {
+        "Tags": Array [
+          Object {
+            "Key": "Name",
+            "Value": "Network/CheapVpc/PublicSubnet1",
+          },
+        ],
+        "VpcId": Object {
+          "Ref": "CheapVpc2197A40E",
+        },
+      },
+      "Type": "AWS::EC2::RouteTable",
+    },
+    "CheapVpcPublicSubnet1RouteTableAssociationB9C8D434": Object {
+      "Properties": Object {
+        "RouteTableId": Object {
+          "Ref": "CheapVpcPublicSubnet1RouteTable2E51E6BB",
+        },
+        "SubnetId": Object {
+          "Ref": "CheapVpcPublicSubnet1Subnet1C126D5A",
+        },
+      },
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+    },
+    "CheapVpcPublicSubnet1Subnet1C126D5A": Object {
+      "Properties": Object {
+        "AvailabilityZone": "dummy1a",
+        "CidrBlock": "10.0.0.0/18",
+        "MapPublicIpOnLaunch": true,
+        "Tags": Array [
+          Object {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "Public",
+          },
+          Object {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Public",
+          },
+          Object {
+            "Key": "Name",
+            "Value": "Network/CheapVpc/PublicSubnet1",
+          },
+        ],
+        "VpcId": Object {
+          "Ref": "CheapVpc2197A40E",
+        },
+      },
+      "Type": "AWS::EC2::Subnet",
+    },
+    "CheapVpcPublicSubnet2DefaultRoute48FBCABC": Object {
+      "DependsOn": Array [
+        "CheapVpcVPCGW9191E736",
+      ],
+      "Properties": Object {
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "GatewayId": Object {
+          "Ref": "CheapVpcIGWF93802F9",
+        },
+        "RouteTableId": Object {
+          "Ref": "CheapVpcPublicSubnet2RouteTableFB211C93",
+        },
+      },
+      "Type": "AWS::EC2::Route",
+    },
+    "CheapVpcPublicSubnet2RouteTableAssociation37928978": Object {
+      "Properties": Object {
+        "RouteTableId": Object {
+          "Ref": "CheapVpcPublicSubnet2RouteTableFB211C93",
+        },
+        "SubnetId": Object {
+          "Ref": "CheapVpcPublicSubnet2Subnet245CE671",
+        },
+      },
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+    },
+    "CheapVpcPublicSubnet2RouteTableFB211C93": Object {
+      "Properties": Object {
+        "Tags": Array [
+          Object {
+            "Key": "Name",
+            "Value": "Network/CheapVpc/PublicSubnet2",
+          },
+        ],
+        "VpcId": Object {
+          "Ref": "CheapVpc2197A40E",
+        },
+      },
+      "Type": "AWS::EC2::RouteTable",
+    },
+    "CheapVpcPublicSubnet2Subnet245CE671": Object {
+      "Properties": Object {
+        "AvailabilityZone": "dummy1b",
+        "CidrBlock": "10.0.64.0/18",
+        "MapPublicIpOnLaunch": true,
+        "Tags": Array [
+          Object {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "Public",
+          },
+          Object {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Public",
+          },
+          Object {
+            "Key": "Name",
+            "Value": "Network/CheapVpc/PublicSubnet2",
+          },
+        ],
+        "VpcId": Object {
+          "Ref": "CheapVpc2197A40E",
+        },
+      },
+      "Type": "AWS::EC2::Subnet",
+    },
+    "CheapVpcVPCGW9191E736": Object {
+      "Properties": Object {
+        "InternetGatewayId": Object {
+          "Ref": "CheapVpcIGWF93802F9",
+        },
+        "VpcId": Object {
+          "Ref": "CheapVpc2197A40E",
+        },
+      },
+      "Type": "AWS::EC2::VPCGatewayAttachment",
+    },
+  },
+  "Rules": Object {
+    "CheckBootstrapVersion": Object {
+      "Assertions": Array [
+        Object {
+          "Assert": Object {
+            "Fn::Not": Array [
+              Object {
+                "Fn::Contains": Array [
+                  Array [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                  ],
+                  Object {
+                    "Ref": "BootstrapVersion",
+                  },
+                ],
+              },
+            ],
+          },
+          "AssertDescription": "CDK bootstrap stack version 6 required. Please run 'cdk bootstrap' with a recent version of the CDK CLI.",
+        },
+      ],
+    },
+  },
+}
+`;

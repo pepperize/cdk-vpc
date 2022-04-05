@@ -1,0 +1,3 @@
+{
+  "ami:account=123456789012:filters.image-type.0=machine:filters.name.0=amzn-ami-vpc-nat-*:filters.state.0=available:owners.0=amazon:region=us-east-1": "ami-003acd4f8da7e06f9"
+}

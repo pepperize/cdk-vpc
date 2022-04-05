@@ -1,8 +1,8 @@
 {
-  "name": "cdk-vpc",
+  "name": "@pepperize/cdk-vpc",
   "repository": {
     "type": "git",
-    "url": "https://github.com/patrick.florek/cdk-vpc.git"
+    "url": "https://github.com/pepperize/cdk-vpc.git"
   },
   "scripts": {
     "build": "npx projen build",
@@ -16,7 +16,9 @@
     "format": "npx projen format",
     "package": "npx projen package",
     "package-all": "npx projen package-all",
+    "package:dotnet": "npx projen package:dotnet",
     "package:js": "npx projen package:js",
+    "package:python": "npx projen package:python",
     "post-compile": "npx projen post-compile",
     "post-upgrade": "npx projen post-upgrade",
     "pre-compile": "npx projen pre-compile",
@@ -36,11 +38,17 @@
   },
   "devDependencies": {
     "@pepperize/projen-awscdk-construct": "latest",
+    "@types/aws-lambda": "^8.10.93",
     "@types/jest": "^27.4.1",
     "@types/node": "^12",
+    "@types/sinon": "^10.0.11",
     "@typescript-eslint/eslint-plugin": "^5",
     "@typescript-eslint/parser": "^5",
     "aws-cdk-lib": "2.1.0",
+    "aws-lambda": "^1.0.7",
+    "aws-sdk": "^2.1107.0",
+    "aws-sdk-mock": "^5.6.2",
+    "cdk-nag": "^2.0.0",
     "constructs": "10.0.5",
     "eslint": "^8",
     "eslint-config-prettier": "^8.5.0",
@@ -57,6 +65,7 @@
     "npm-check-updates": "^12",
     "prettier": "^2.6.2",
     "projen": "^0.54.7",
+    "sinon": "^13.0.1",
     "standard-version": "^9",
     "ts-jest": "^27.1.4",
     "typescript": "^4.6.3"
@@ -66,10 +75,20 @@
     "constructs": "^10.0.5"
   },
   "keywords": [
+    "AWS",
+    "CDK",
+    "EC2",
+    "NatGateway",
+    "NatInstance",
+    "Utilities",
+    "VPC",
     "cdk"
   ],
   "main": "lib/index.js",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "version": "0.0.0",
   "jest": {
     "testMatch": [
@@ -116,7 +135,16 @@
   "stability": "stable",
   "jsii": {
     "outdir": "dist",
-    "targets": {},
+    "targets": {
+      "python": {
+        "distName": "pepperize.cdk-vpc",
+        "module": "pepperize_cdk_vpc"
+      },
+      "dotnet": {
+        "namespace": "Pepperize.CDK",
+        "packageId": "Pepperize.CDK.Vpc"
+      }
+    },
     "tsc": {
       "outDir": "lib",
       "rootDir": "src"

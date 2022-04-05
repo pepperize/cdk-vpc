@@ -6,12 +6,20 @@
       "type": "build"
     },
     {
+      "name": "@types/aws-lambda",
+      "type": "build"
+    },
+    {
       "name": "@types/jest",
       "type": "build"
     },
     {
       "name": "@types/node",
       "version": "^12",
+      "type": "build"
+    },
+    {
+      "name": "@types/sinon",
       "type": "build"
     },
     {
@@ -27,6 +35,23 @@
     {
       "name": "aws-cdk-lib",
       "version": "2.1.0",
+      "type": "build"
+    },
+    {
+      "name": "aws-lambda",
+      "type": "build"
+    },
+    {
+      "name": "aws-sdk",
+      "type": "build"
+    },
+    {
+      "name": "aws-sdk-mock",
+      "type": "build"
+    },
+    {
+      "name": "cdk-nag",
+      "version": "^2.0.0",
       "type": "build"
     },
     {
@@ -95,6 +120,10 @@
     },
     {
       "name": "projen",
+      "type": "build"
+    },
+    {
+      "name": "sinon",
       "type": "build"
     },
     {
