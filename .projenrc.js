@@ -60,4 +60,6 @@ project.gitpod.addCustomTask({
 
 project.gitpod.addVscodeExtensions("dbaeumer.vscode-eslint");
 
+project.tasks.tryFind("package:python").prependExec("pip3 install packaging");
+
 project.synth();
