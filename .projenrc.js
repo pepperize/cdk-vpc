@@ -6,10 +6,10 @@ const project = new AwsCdkConstructLibrary({
   cdkVersion: "2.1.0",
   defaultReleaseBranch: "main",
   name: "@pepperize/cdk-vpc",
-  // description: undefined,  /* The description is just a string that helps people understand the purpose of the package. */
+  description: "Utility constructs for tagging subnets or creating a cheaper vpc.",
   repositoryUrl: "https://github.com/pepperize/cdk-vpc.git",
 
-  keywords: ["AWS", "CDK", "EC2", "VPC", "NatGateway", "NatInstance", "Utilities"],
+  keywords: ["AWS", "CDK", "EC2", "VPC", "NatGateway", "NatInstance", "Tag", "Subnet", "Utilities"],
 
   devDeps: [
     "@pepperize/projen-awscdk-construct@latest",

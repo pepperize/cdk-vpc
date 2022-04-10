@@ -1,5 +1,6 @@
 {
   "name": "@pepperize/cdk-vpc",
+  "description": "Utility constructs for tagging subnets or creating a cheaper vpc.",
   "repository": {
     "type": "git",
     "url": "https://github.com/pepperize/cdk-vpc.git"
@@ -80,6 +81,8 @@
     "EC2",
     "NatGateway",
     "NatInstance",
+    "Subnet",
+    "Tag",
     "Utilities",
     "VPC",
     "cdk"
