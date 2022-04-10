@@ -1,5 +1,5 @@
 import * as crypto from "crypto";
-import { Stack } from "aws-cdk-lib";
+import { RemovalPolicy, Stack } from "aws-cdk-lib";
 import { AwsCustomResource, AwsCustomResourcePolicy, PhysicalResourceId } from "aws-cdk-lib/custom-resources";
 import { Construct } from "constructs";
 
@@ -23,6 +23,8 @@ export interface Tag {
  *
  * @see https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html
  * @see https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html
+ *
+ * @experimental
  */
 export interface CreateTagsProps {
   /**
@@ -36,6 +38,8 @@ export interface CreateTagsProps {
    * The tags. The value parameter is required, but if you don't want the tag to have a value, specify the parameter with no value, and we set the value to an empty string.
    */
   readonly tags: Tag[];
+
+  readonly removalPolicy?: RemovalPolicy;
 }
 
 export class CreateTags extends Construct {
@@ -43,6 +47,7 @@ export class CreateTags extends Construct {
     super(scope, id);
 
     const { resourceIds, tags } = props;
+    const removalPolicy = props.removalPolicy ?? RemovalPolicy.RETAIN;
 
     new AwsCustomResource(this, "CreateTags", {
       onCreate: {
@@ -57,6 +62,21 @@ export class CreateTags extends Construct {
         },
         physicalResourceId: PhysicalResourceId.of(this.makeUniqueId(resourceIds)),
       },
+      onDelete:
+        removalPolicy != RemovalPolicy.DESTROY
+          ? undefined
+          : {
+              service: "EC2",
+              action: "createTags", // https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/EC2.html#deleteTags-property
+              region: Stack.of(this).region,
+              parameters: {
+                Resources: resourceIds,
+                Tags: tags.map((tag) => {
+                  return { Key: tag.key, Value: tag.value };
+                }),
+              },
+              physicalResourceId: PhysicalResourceId.of(this.makeUniqueId(resourceIds)),
+            },
       installLatestAwsSdk: false,
       policy: AwsCustomResourcePolicy.fromSdkCalls({
         resources: AwsCustomResourcePolicy.ANY_RESOURCE,

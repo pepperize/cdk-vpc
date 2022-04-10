@@ -767,6 +767,7 @@ const createTagsProps: CreateTagsProps = { ... }
 | --- | --- | --- |
 | <code><a href="#@pepperize/cdk-vpc.CreateTagsProps.property.resourceIds">resourceIds</a></code> | <code>string[]</code> | The IDs of the ec2 resources, separated by spaces. |
 | <code><a href="#@pepperize/cdk-vpc.CreateTagsProps.property.tags">tags</a></code> | <code><a href="#@pepperize/cdk-vpc.Tag">Tag</a>[]</code> | The tags. |
+| <code><a href="#@pepperize/cdk-vpc.CreateTagsProps.property.removalPolicy">removalPolicy</a></code> | <code>aws-cdk-lib.RemovalPolicy</code> | *No description.* |
 
 ---
 
@@ -797,6 +798,16 @@ public readonly tags: Tag[];
 The tags.
 
 The value parameter is required, but if you don't want the tag to have a value, specify the parameter with no value, and we set the value to an empty string.
+
+---
+
+##### `removalPolicy`<sup>Optional</sup> <a name="removalPolicy" id="@pepperize/cdk-vpc.CreateTagsProps.property.removalPolicy"></a>
+
+```typescript
+public readonly removalPolicy: RemovalPolicy;
+```
+
+- *Type:* aws-cdk-lib.RemovalPolicy
 
 ---
 
