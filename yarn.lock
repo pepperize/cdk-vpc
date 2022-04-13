@@ -672,9 +672,9 @@
   integrity sha512-T8TbSnGsxo6TDBJx/Sgv/BlVJL3tshxZP7Aq5R1mSnM5OcHY2dQaxLMu2+E8u3gN0MLOzdjurqN4ZRVuzQycOQ==
 
 "@pepperize/projen-awscdk-construct@latest":
-  version "0.0.84"
-  resolved "https://registry.yarnpkg.com/@pepperize/projen-awscdk-construct/-/projen-awscdk-construct-0.0.84.tgz#762403be34a4f799ce6bbce94cab856af05ad670"
-  integrity sha512-Od5bx9ToQuZHWLYs2PFzYJlpXjxSUUYDC28eE/3sJ1T0056r0Owujp7XtriJTv4wh08LfV2mEySFGPxe+jBEFg==
+  version "0.0.85"
+  resolved "https://registry.yarnpkg.com/@pepperize/projen-awscdk-construct/-/projen-awscdk-construct-0.0.85.tgz#5cfa9e46a2b3b459936b0e3a288e2f107aa3acb8"
+  integrity sha512-PtNMiFuABZRSRJdKl1bX/9W5xPL4Zg0bgD2gDwwZpH71VvC2PAykJZuXM1MB/T/5WY5ZUxZEph70+rBEziiWOw==
   dependencies:
     projen "^0.50.33"
 
@@ -1217,9 +1217,9 @@ aws-sdk-mock@^5.6.2:
     traverse "^0.6.6"
 
 aws-sdk@^2.1107.0, aws-sdk@^2.814.0, aws-sdk@^2.928.0:
-  version "2.1112.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1112.0.tgz#7e6f60df562ebd909a9435b01673ed7685e10ffd"
-  integrity sha512-8FKr3zwD2bHZQLmxJ7d1VwvDkW9kKx4YPdNXawV+CqNUzQC/9ZmSmHyx8mZCv6J722tqxIZh5c567499QawuZw==
+  version "2.1113.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1113.0.tgz#78ce8b713048f3f72c6c55561cd0d70b4ac71da1"
+  integrity sha512-F+B+HFnKCVIOmErZ1jJ8YL4XxDSaUI9l3JskfpIrk0XdJVcIfyHgA4XUrTUda4z5TOy1Z7eWV2IXgEpVRM4xyw==
   dependencies:
     buffer "4.9.2"
     events "1.1.1"
@@ -3882,9 +3882,9 @@ jsii-diff@^1.55.1:
     yargs "^16.2.0"
 
 jsii-docgen@^6.3.0:
-  version "6.3.7"
-  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-6.3.7.tgz#7a7fc185a5f28dd487716b39980205e8d8989a37"
-  integrity sha512-bRD13VHMNwlKV+HsKpUVSCECqCRCGW/xV2e+HH8dzLUODec2B0N3MFxL/uDncV+TnpXI1JUj6UsqOPr1E0wM/A==
+  version "6.3.8"
+  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-6.3.8.tgz#098c5c96acfe9d6c279ade160ab280ee118cd1d9"
+  integrity sha512-TbFGV+9a4wchWD+2nzWCTr91cVTzYUPppt0uWwubVBWjcBjsGdIxL3Ne8ZrzdzONFwkJ0t7kmrtWC63vuTs9tw==
   dependencies:
     "@jsii/spec" "^1.56.0"
     case "^1.6.3"
@@ -3893,7 +3893,7 @@ jsii-docgen@^6.3.0:
     glob-promise "^3.4.0"
     jsii-reflect "^1.56.0"
     jsii-rosetta "^1.56.0"
-    semver "^7.3.6"
+    semver "^7.3.7"
     yargs "^16.2.0"
 
 jsii-reflect@^1.56.0:
@@ -4185,11 +4185,6 @@ lru-cache@^7.3.1, lru-cache@^7.5.1, lru-cache@^7.7.1:
   version "7.7.3"
   resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-7.7.3.tgz#98cd19eef89ce6a4a3c4502c17c833888677c252"
   integrity sha512-WY9wjJNQt9+PZilnLbuFKM+SwDull9+6IAguOrarOMoOHTcJ9GnXSO11+Gw6c7xtDkBkthR57OZMtZKYr+1CEw==
-
-lru-cache@^7.4.0:
-  version "7.8.1"
-  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-7.8.1.tgz#68ee3f4807a57d2ba185b7fd90827d5c21ce82bb"
-  integrity sha512-E1v547OCgJvbvevfjgK9sNKIVXO96NnsTsFPBlg4ZxjhsJSODoH9lk8Bm0OxvHNm6Vm5Yqkl/1fErDxhYL8Skg==
 
 make-dir@^3.0.0:
   version "3.1.0"
@@ -4531,9 +4526,9 @@ npm-bundled@^1.1.1, npm-bundled@^1.1.2:
     npm-normalize-package-bin "^1.0.1"
 
 npm-check-updates@^12:
-  version "12.5.8"
-  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-12.5.8.tgz#74c4fa7bea466cb41456d629a1f6a26a75133ef4"
-  integrity sha512-8SDZ6qYXI0aKf63zSbByqB9QmK8ygrZ+UVcXg9kGQyvH7dGIcFauFF0ksC0NdThHkU/5QhowJVSHXva9zujkJg==
+  version "12.5.9"
+  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-12.5.9.tgz#7057c78f9f62be12b834ec1eee5c144d972ad795"
+  integrity sha512-l9iOvD7EsQb96gFJL45V01YG6bP8+dmobYnSguvehPuNwgdWNMrE8RC8bSfURX5iUmX4bkobN4T8XMHXN9GMHA==
   dependencies:
     chalk "^4.1.2"
     cint "^8.2.1"
@@ -5384,12 +5379,12 @@ semver-utils@^1.1.4:
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.7.1.tgz#a954f931aeba508d307bbf069eff0c01c96116f7"
   integrity sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ==
 
-semver@7.x, semver@^7.0.0, semver@^7.1.1, semver@^7.3.2, semver@^7.3.4, semver@^7.3.5, semver@^7.3.6:
-  version "7.3.6"
-  resolved "https://registry.yarnpkg.com/semver/-/semver-7.3.6.tgz#5d73886fb9c0c6602e79440b97165c29581cbb2b"
-  integrity sha512-HZWqcgwLsjaX1HBD31msI/rXktuIhS+lWvdE4kN9z+8IVT4Itc7vqU2WvYsyD6/sjYCt4dEKH/m1M3dwI9CC5w==
+semver@7.x, semver@^7.0.0, semver@^7.1.1, semver@^7.3.2, semver@^7.3.4, semver@^7.3.5, semver@^7.3.7:
+  version "7.3.7"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-7.3.7.tgz#12c5b649afdbf9049707796e22a4028814ce523f"
+  integrity sha512-QlYTucUYOews+WeEujDoEGziz4K6c47V/Bd+LjSSYcA94p+DmINdf7ncaUinThfvZyu13lN9OY1XDxt8C0Tw0g==
   dependencies:
-    lru-cache "^7.4.0"
+    lru-cache "^6.0.0"
 
 semver@^6.0.0, semver@^6.2.0, semver@^6.3.0:
   version "6.3.0"
