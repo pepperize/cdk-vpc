@@ -672,9 +672,9 @@
   integrity sha512-T8TbSnGsxo6TDBJx/Sgv/BlVJL3tshxZP7Aq5R1mSnM5OcHY2dQaxLMu2+E8u3gN0MLOzdjurqN4ZRVuzQycOQ==
 
 "@pepperize/projen-awscdk-construct@latest":
-  version "0.0.88"
-  resolved "https://registry.yarnpkg.com/@pepperize/projen-awscdk-construct/-/projen-awscdk-construct-0.0.88.tgz#b89fd77228734409c1ec6f63125fbfde238d5162"
-  integrity sha512-UffrdA3nn8GLaMGJJTUA+moqHKQsu2flcjaqpE+YqZp3NPXq3xnUhjQooJY05eVwKSETa3dM+H1pZ5X9OH9Unw==
+  version "0.0.90"
+  resolved "https://registry.yarnpkg.com/@pepperize/projen-awscdk-construct/-/projen-awscdk-construct-0.0.90.tgz#16d57c9cb2866169b3f7000816fcf83268aa2014"
+  integrity sha512-QYnlIvnxzHmrue8Q8VEvzIZJb9JWYWKOr6CPUsw835aWMKKtTL9skVQBHMd6o7MmgVuPRrkiRO7paqoqOlHBIA==
   dependencies:
     projen "^0.50.33"
 
