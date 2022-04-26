@@ -672,9 +672,9 @@
   integrity sha512-T8TbSnGsxo6TDBJx/Sgv/BlVJL3tshxZP7Aq5R1mSnM5OcHY2dQaxLMu2+E8u3gN0MLOzdjurqN4ZRVuzQycOQ==
 
 "@pepperize/projen-awscdk-construct@latest":
-  version "0.0.92"
-  resolved "https://registry.yarnpkg.com/@pepperize/projen-awscdk-construct/-/projen-awscdk-construct-0.0.92.tgz#6cbfadb09cffb31b7bd1ec952332568b99111a7b"
-  integrity sha512-vMRUZMOTt/uhX3IGQV839qIWZC+la9HajKSkw4uDbUa/Ke4IaCLJd89+vB9fKcVvC+iRR8YtTVAU1kKV4j1u5Q==
+  version "0.0.95"
+  resolved "https://registry.yarnpkg.com/@pepperize/projen-awscdk-construct/-/projen-awscdk-construct-0.0.95.tgz#980ea267cf25ee5fa932348ec0e4b2544ee5eac0"
+  integrity sha512-CL0zgSW2BPS2DJc3rRul5QfoZQPbkuSJLu4fiMZj571f1PPzvqCPFA3bpofrrSrAoLoz+9nsAEMC44bxDUcq9w==
   dependencies:
     projen "^0.50.33"
 
@@ -3882,9 +3882,9 @@ jsii-diff@^1.55.1:
     yargs "^16.2.0"
 
 jsii-docgen@^6.3.0:
-  version "6.3.20"
-  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-6.3.20.tgz#1e407f4304dae9d3c9df9d9f7fe5baa5d6a39312"
-  integrity sha512-4UjvRnzRKL/vYUneSZP56s0oxaKSCNRqzndI9pG8f+DUdK38gZwTtllG/wz3cRO6rB4V5y1bEj/sFDLKz5i0aA==
+  version "6.3.21"
+  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-6.3.21.tgz#d690c6a49ec060c3ccf169922274da9498d9501c"
+  integrity sha512-M5dpNNux7gfqWfu6pND9daR/uN0lo50VivU6A64pZwQbOHKtlsmK9KdUrSD2Z8yLSVhs50dNk2B6t9Zs28smaQ==
   dependencies:
     "@jsii/spec" "^1.57.0"
     case "^1.6.3"
