@@ -672,9 +672,9 @@
   integrity sha512-T8TbSnGsxo6TDBJx/Sgv/BlVJL3tshxZP7Aq5R1mSnM5OcHY2dQaxLMu2+E8u3gN0MLOzdjurqN4ZRVuzQycOQ==
 
 "@pepperize/projen-awscdk-construct@latest":
-  version "0.0.95"
-  resolved "https://registry.yarnpkg.com/@pepperize/projen-awscdk-construct/-/projen-awscdk-construct-0.0.95.tgz#980ea267cf25ee5fa932348ec0e4b2544ee5eac0"
-  integrity sha512-CL0zgSW2BPS2DJc3rRul5QfoZQPbkuSJLu4fiMZj571f1PPzvqCPFA3bpofrrSrAoLoz+9nsAEMC44bxDUcq9w==
+  version "0.0.96"
+  resolved "https://registry.yarnpkg.com/@pepperize/projen-awscdk-construct/-/projen-awscdk-construct-0.0.96.tgz#92a8348dd798246a75a3cd73e9b5a1f4e3471580"
+  integrity sha512-C8ernPUphi9tJRyWLRw3WQTiuA9UfgEc5BsstcVbFIbYlBaHaVIh7sgAEAQVKn+f9Drv1bPIp3uejlcYD5tvEQ==
   dependencies:
     projen "^0.50.33"
 
@@ -848,9 +848,9 @@
   integrity sha512-UxDxWn7dl97rKVeVS61vErvw086aCYhDLyvRQZ5Rk65rZKepaFdm53GeqXaKBuOhED4e9uWq34IC3TdSdJJ2Gw==
 
 "@types/node@^12":
-  version "12.20.49"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.20.49.tgz#97897a33dd145490f514bbcbccefc178534e360f"
-  integrity sha512-5e6QNb9bkeh4Hni4ktLqUZuUqnGTX/kou2aZkXyxtuYaHXgBm+In1SHR9V+7kDzWzjB08KC2uqt2doDi7cuAAA==
+  version "12.20.50"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.20.50.tgz#14ba5198f1754ffd0472a2f84ab433b45ee0b65e"
+  integrity sha512-+9axpWx2b2JCVovr7Ilgt96uc6C1zBKOQMpGtRbWT9IoR/8ue32GGMfGA4woP8QyP2gBs6GQWEVM3tCybGCxDA==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"
@@ -1469,9 +1469,9 @@ case@1.6.3, case@^1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-nag@^2.0.0:
-  version "2.12.36"
-  resolved "https://registry.yarnpkg.com/cdk-nag/-/cdk-nag-2.12.36.tgz#a807b77613a01c7ab38ec300318f017b7f0830c1"
-  integrity sha512-tw5wHzVdymEXSqmnFL9dxc9l8RSmP2seIaWcKWUxY263Cu46RSAouygnDkI+8acggvQGxcIWvO2HxkAG9BrnIg==
+  version "2.12.38"
+  resolved "https://registry.yarnpkg.com/cdk-nag/-/cdk-nag-2.12.38.tgz#0006e933a6f5f7c3143fad3270c9a08d9b65cdc9"
+  integrity sha512-cRFJr5WjguEd5pcCNwUaeMgqkKb/GvW4edn25BBrrGCQ5QTfT/gSpMTIR+NN4vuCIrr2Fz6zmUHCbzO9ZxC0OQ==
 
 chalk@^2.0.0, chalk@^2.4.2:
   version "2.4.2"
