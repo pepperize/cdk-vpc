@@ -1217,9 +1217,9 @@ aws-sdk-mock@^5.6.2:
     traverse "^0.6.6"
 
 aws-sdk@^2.1107.0, aws-sdk@^2.814.0, aws-sdk@^2.928.0:
-  version "2.1122.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1122.0.tgz#5d53e6937f59de9f153e72a8ea3b6df9d97daf9d"
-  integrity sha512-545VawhsCQ7yEx9jZKV0hTTW3FS/waycISWMvnNwqRfpU9o4FQ4DSu3je7ekn5yFKM+91dxJC+IfJgtIV8WaUw==
+  version "2.1123.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1123.0.tgz#56a94196482d4eb5de8217b9ad2138384caa6c73"
+  integrity sha512-yvPDpuzgz8a3YV99hJ0ChLWpbLxNuCiR8+0Fd4w/AoIf08OBZvTN0MAG/XnPVgTLya5qW8YZtghFTrodzwhYwg==
   dependencies:
     buffer "4.9.2"
     events "1.1.1"
@@ -1469,9 +1469,9 @@ case@1.6.3, case@^1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-nag@^2.0.0:
-  version "2.12.38"
-  resolved "https://registry.yarnpkg.com/cdk-nag/-/cdk-nag-2.12.38.tgz#0006e933a6f5f7c3143fad3270c9a08d9b65cdc9"
-  integrity sha512-cRFJr5WjguEd5pcCNwUaeMgqkKb/GvW4edn25BBrrGCQ5QTfT/gSpMTIR+NN4vuCIrr2Fz6zmUHCbzO9ZxC0OQ==
+  version "2.12.39"
+  resolved "https://registry.yarnpkg.com/cdk-nag/-/cdk-nag-2.12.39.tgz#3e83a3ec9dc5241e92bdbd4d3282e899a0044cf0"
+  integrity sha512-pYM0eDG6ej29T/ybYg5ke3f47jgjYOsB2NqpdWfzIGzXPtPyAT+AtqFhQd4HCQI9c69NnUgN0l7KHY1rxf1qDw==
 
 chalk@^2.0.0, chalk@^2.4.2:
   version "2.4.2"
@@ -3882,9 +3882,9 @@ jsii-diff@^1.55.1:
     yargs "^16.2.0"
 
 jsii-docgen@^6.3.0:
-  version "6.3.22"
-  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-6.3.22.tgz#e3483f6cd92d1e3bc7ea9929bd8c37029a1124cf"
-  integrity sha512-f/dWTQkfWCk+dkVx9bXEcot2b0tLzBxkT/xv6x351i6bihgd8NPDy5BMll66a1D2NE553oTiQQlBFmb13qDbFw==
+  version "6.3.23"
+  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-6.3.23.tgz#e03cab47d1e17f0148600e5211e3cfb9d7c97df9"
+  integrity sha512-PkLdcJvQ92D3aKNmHRRYtcMOwfeF89T2EBFxoad8dkA2W6oyfMbDtRnK8NN9q0Ij44O3ZYBRc7qkQXwPiRjG1w==
   dependencies:
     "@jsii/spec" "^1.57.0"
     case "^1.6.3"
