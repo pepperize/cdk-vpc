@@ -672,9 +672,9 @@
   integrity sha512-T8TbSnGsxo6TDBJx/Sgv/BlVJL3tshxZP7Aq5R1mSnM5OcHY2dQaxLMu2+E8u3gN0MLOzdjurqN4ZRVuzQycOQ==
 
 "@pepperize/projen-awscdk-construct@latest":
-  version "0.0.98"
-  resolved "https://registry.yarnpkg.com/@pepperize/projen-awscdk-construct/-/projen-awscdk-construct-0.0.98.tgz#d26ddde73d6d7a5cdb724f92435b38f0bf364d67"
-  integrity sha512-8z2xAtuLyLN5N/FstlknvbGuB++CqUXeeeztwxuswkZ7Njyp0PZPrxKeAHS+0X6YRNzphEpGmbXzF0sORhPREQ==
+  version "0.0.99"
+  resolved "https://registry.yarnpkg.com/@pepperize/projen-awscdk-construct/-/projen-awscdk-construct-0.0.99.tgz#d7a72c0447c2b01bffb3268f89370a76d749a563"
+  integrity sha512-vqWZC4LtBGDiKncqeGeDe2dkXKCClNcgeF2SVrMDjThnN5YoR0Mo/sM0+BkmERZ8WKvC6/l50o2wVZJJl24EJw==
   dependencies:
     projen "^0.50.33"
 
@@ -1210,9 +1210,9 @@ aws-sdk-mock@^5.6.2:
     traverse "^0.6.6"
 
 aws-sdk@^2.1107.0, aws-sdk@^2.1122.0, aws-sdk@^2.814.0:
-  version "2.1124.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1124.0.tgz#350550b973f210b092a45184036659251d7cbd1e"
-  integrity sha512-LIj2EmvduQmyjpSLoDPe2TvRBrGWhJKlCuC7lungN4f+qYPOfVWg6/c9GdP99W0q5p2IqhDkCmQ/ZZBpO1Z/Fg==
+  version "2.1125.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1125.0.tgz#2a73f5bf1e5e8f8dbc873ef87cfe14925721ba2e"
+  integrity sha512-2syNkKDqDcDmB/chc61a5xx+KYzaarLs1/KshE0b1Opp2oSq2FARyUBbk59HgwKaDUB61uPF33ZG9sHiIVx2hQ==
   dependencies:
     buffer "4.9.2"
     events "1.1.1"
@@ -1462,9 +1462,9 @@ case@1.6.3, case@^1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-nag@^2.0.0:
-  version "2.12.40"
-  resolved "https://registry.yarnpkg.com/cdk-nag/-/cdk-nag-2.12.40.tgz#0bf62bdc46505d637d1b90e815089d345c168133"
-  integrity sha512-zhpMdXRzE0mLQmhnp9eCLG38KQHZPggsVRbrHfKFF30bwjtN1GQPVvPPys8JnIjwviNKIlmphuliSzoPW6ofXw==
+  version "2.12.43"
+  resolved "https://registry.yarnpkg.com/cdk-nag/-/cdk-nag-2.12.43.tgz#b09a67c1133ca2f9e8c2133bce5100261b78fbd1"
+  integrity sha512-uDOV0W4V91G4ieysEk83k0MeHUkBVKYjLCp3ckAXtPJmPhP5owOZduOWjmXHTK5IBr0WVlwI7Sik4ECZ5uZSXA==
 
 chalk@^2.0.0, chalk@^2.4.2:
   version "2.4.2"
@@ -3875,9 +3875,9 @@ jsii-diff@^1.55.1:
     yargs "^16.2.0"
 
 jsii-docgen@^6.3.0:
-  version "6.3.24"
-  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-6.3.24.tgz#5b5a70536fe7b7155e9bee356cce624d1ccdf58c"
-  integrity sha512-GMxX7OsRUIZZ0QXx+XqjCFQXhR9qhMcfbFFyKkYVdujBIKE517qZ7Vh2GEIaOV9qOuAuz2GJ/DAJHufKd25GvA==
+  version "6.3.26"
+  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-6.3.26.tgz#39c659dccffe74961e1a0e3df81c4784d677b269"
+  integrity sha512-ZvJDLiYGwOsR3LIUIjV3Q/fbApG2CqKDZ49Qgx3EmFugE0hrAl6x9zyQwmy8NwRCK6FY0Ex7NoOq3RKN0Myagw==
   dependencies:
     "@jsii/spec" "^1.57.0"
     case "^1.6.3"
