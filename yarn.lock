@@ -672,9 +672,9 @@
   integrity sha512-T8TbSnGsxo6TDBJx/Sgv/BlVJL3tshxZP7Aq5R1mSnM5OcHY2dQaxLMu2+E8u3gN0MLOzdjurqN4ZRVuzQycOQ==
 
 "@pepperize/projen-awscdk-construct@latest":
-  version "0.0.99"
-  resolved "https://registry.yarnpkg.com/@pepperize/projen-awscdk-construct/-/projen-awscdk-construct-0.0.99.tgz#d7a72c0447c2b01bffb3268f89370a76d749a563"
-  integrity sha512-vqWZC4LtBGDiKncqeGeDe2dkXKCClNcgeF2SVrMDjThnN5YoR0Mo/sM0+BkmERZ8WKvC6/l50o2wVZJJl24EJw==
+  version "0.0.102"
+  resolved "https://registry.yarnpkg.com/@pepperize/projen-awscdk-construct/-/projen-awscdk-construct-0.0.102.tgz#77ef94b504e5369a32357dd0d6d92f7179337b4b"
+  integrity sha512-IiSAqqurIQhASwqFslKGL4QMsxn/lsYks7tJ5wAJku5t+0kDdIKFpApbquQV2VLbAlkoAjOM4PTt3u8qfcrAaw==
   dependencies:
     projen "^0.50.33"
 
@@ -808,9 +808,9 @@
     "@types/istanbul-lib-report" "*"
 
 "@types/jest@^27.4.1":
-  version "27.4.1"
-  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-27.4.1.tgz#185cbe2926eaaf9662d340cc02e548ce9e11ab6d"
-  integrity sha512-23iPJADSmicDVrWk+HT58LMJtzLAnB2AgIzplQuq/bSrGaxCrlvRFjGbXmamnnk/mAmCdLStiGqggu28ocUyiw==
+  version "27.5.0"
+  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-27.5.0.tgz#e04ed1824ca6b1dd0438997ba60f99a7405d4c7b"
+  integrity sha512-9RBFx7r4k+msyj/arpfaa0WOOEcaAZNmN+j80KFbFCoSqCJGHTz7YMAMGQW9Xmqm5w6l5c25vbSjMwlikJi5+g==
   dependencies:
     jest-matcher-utils "^27.0.0"
     pretty-format "^27.0.0"
@@ -3875,9 +3875,9 @@ jsii-diff@^1.55.1:
     yargs "^16.2.0"
 
 jsii-docgen@^6.3.0:
-  version "6.3.26"
-  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-6.3.26.tgz#39c659dccffe74961e1a0e3df81c4784d677b269"
-  integrity sha512-ZvJDLiYGwOsR3LIUIjV3Q/fbApG2CqKDZ49Qgx3EmFugE0hrAl6x9zyQwmy8NwRCK6FY0Ex7NoOq3RKN0Myagw==
+  version "6.3.27"
+  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-6.3.27.tgz#b5e7a69ee71c2e1252380f5d623c937465080c3f"
+  integrity sha512-BuDpCO3S1rlPuP+mM8UJP+4d+2ca34DUhnEdVxiD6E8XE4xj5hZDnbX3Z6ocD3h2eJG4Xt644ZC5byWOlBiAQw==
   dependencies:
     "@jsii/spec" "^1.57.0"
     case "^1.6.3"
