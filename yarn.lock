@@ -1482,9 +1482,9 @@ case@1.6.3, case@^1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-nag@^2.0.0:
-  version "2.14.12"
-  resolved "https://registry.yarnpkg.com/cdk-nag/-/cdk-nag-2.14.12.tgz#45a8fabfe372be7b8e37c3a658bc4b4376a7fbb4"
-  integrity sha512-wWTHzgyxBbMHkR9Vx+cRAiQHoThxoixbjfq3usvZ6JLLmunomBxFf85vNdy5H0Y7GuY3wjQS0TWJHioHPcpWCg==
+  version "2.14.13"
+  resolved "https://registry.yarnpkg.com/cdk-nag/-/cdk-nag-2.14.13.tgz#64ea1ce2a8b7f723ceffa90ccd4562998fd749d5"
+  integrity sha512-u4DeWacaQyBtSUtiA05+DCF5oV7Ft6JEEgRxBpc9SFXVfW9RaUcpyGhWB3mwcZI3Cp/MJCvIOWopS4BSZfGZ5w==
 
 chalk@^2.0.0, chalk@^2.4.2:
   version "2.4.2"
@@ -5964,9 +5964,9 @@ typedarray@^0.0.6:
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
 typescript@^4.6.3:
-  version "4.6.4"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.6.4.tgz#caa78bbc3a59e6a5c510d35703f6a09877ce45e9"
-  integrity sha512-9ia/jWHIEbo49HfjrLGfKbZSuWo9iTMwXO+Ca3pRsSpbsMbc7/IU8NKdCZVRRBafVPGnoJeFL76ZOAA84I9fEg==
+  version "4.7.2"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.7.2.tgz#1f9aa2ceb9af87cca227813b4310fff0b51593c4"
+  integrity sha512-Mamb1iX2FDUpcTRzltPxgWMKy3fhg0TN378ylbktPGPK/99KbDtMQ4W1hwgsbPAsG3a0xKa1vmw4VKZQbkvz5A==
 
 typescript@~3.9.10:
   version "3.9.10"
