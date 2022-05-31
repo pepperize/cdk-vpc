@@ -687,9 +687,9 @@
   integrity sha512-T8TbSnGsxo6TDBJx/Sgv/BlVJL3tshxZP7Aq5R1mSnM5OcHY2dQaxLMu2+E8u3gN0MLOzdjurqN4ZRVuzQycOQ==
 
 "@pepperize/projen-awscdk-construct@latest":
-  version "0.0.123"
-  resolved "https://registry.yarnpkg.com/@pepperize/projen-awscdk-construct/-/projen-awscdk-construct-0.0.123.tgz#4b86cffd9c01fb7672eca713d1d0e77fa8d13ea0"
-  integrity sha512-mI5sEiNlxTdyYarxtR1pUu7pT+cU6vrpMxStDbSwnBcavqIwdBkyS22KOdyRHIjg8M0wYetMDUip66hGtSJyzg==
+  version "0.0.125"
+  resolved "https://registry.yarnpkg.com/@pepperize/projen-awscdk-construct/-/projen-awscdk-construct-0.0.125.tgz#2550a4a0cfaa18d1c600d78fb36cd1459d2f3f14"
+  integrity sha512-WOpwcetGsJNOSoGvj4ihJCsCQZ9EDrsWZlMZXBUkoNLOA8OepqRIi3CxU9qJM+lFGTYKXc3TMYjgLaQhWugj4A==
   dependencies:
     projen "^0.50.33"
 
@@ -1482,9 +1482,9 @@ case@1.6.3, case@^1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-nag@^2.0.0:
-  version "2.14.18"
-  resolved "https://registry.yarnpkg.com/cdk-nag/-/cdk-nag-2.14.18.tgz#da803c2c0abfb691751eeb04db91135c572b3e07"
-  integrity sha512-CjCSQzJvYXip2n50XE1ggsF4rSy9WfLulTy6+wFxCX703H6AJo4Y5cWhY9Gm4ukTiha9N/WTxfPbarwyS4TsLw==
+  version "2.14.19"
+  resolved "https://registry.yarnpkg.com/cdk-nag/-/cdk-nag-2.14.19.tgz#47ee805b07f15eb84ffc9aa0d5991e2fc0f8716d"
+  integrity sha512-RfZawlJBMu445WfhJm3pT7cIdNmlLAQxVH4pneSpaZixk7Mj92h5ts5oyW3rVBv4htjyH9U83gTnGSjb/gfJOQ==
 
 chalk@^2.0.0, chalk@^2.4.2:
   version "2.4.2"
