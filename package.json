@@ -18,6 +18,7 @@
     "package": "npx projen package",
     "package-all": "npx projen package-all",
     "package:dotnet": "npx projen package:dotnet",
+    "package:java": "npx projen package:java",
     "package:js": "npx projen package:js",
     "package:python": "npx projen package:python",
     "post-compile": "npx projen post-compile",
@@ -49,7 +50,6 @@
     "aws-lambda": "^1.0.7",
     "aws-sdk": "^2.1107.0",
     "aws-sdk-mock": "^5.6.2",
-    "cdk-nag": "^2.0.0",
     "constructs": "10.0.5",
     "eslint": "^8",
     "eslint-config-prettier": "^8.5.0",
@@ -139,6 +139,13 @@
   "jsii": {
     "outdir": "dist",
     "targets": {
+      "java": {
+        "package": "com.pepperize.cdk.vpc",
+        "maven": {
+          "groupId": "com.pepperize",
+          "artifactId": "cdk-vpc"
+        }
+      },
       "python": {
         "distName": "pepperize.cdk-vpc",
         "module": "pepperize_cdk_vpc"

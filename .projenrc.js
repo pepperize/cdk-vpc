@@ -19,7 +19,6 @@ const project = new AwsCdkConstructLibrary({
     "aws-lambda",
     "aws-sdk",
     "aws-sdk-mock",
-    "cdk-nag@^2.0.0",
     "sinon",
   ],
 
@@ -47,6 +46,12 @@ const project = new AwsCdkConstructLibrary({
   publishToPypi: {
     distName: "pepperize.cdk-vpc",
     module: "pepperize_cdk_vpc",
+  },
+  publishToMaven: {
+    mavenEndpoint: "https://s01.oss.sonatype.org",
+    mavenGroupId: "com.pepperize",
+    mavenArtifactId: "cdk-vpc",
+    javaPackage: "com.pepperize.cdk.vpc",
   },
 
   gitpod: true,

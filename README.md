@@ -2,6 +2,7 @@
 [![npm (scoped)](https://img.shields.io/npm/v/@pepperize/cdk-vpc?style=flat-square)](https://www.npmjs.com/package/@pepperize/cdk-vpc)
 [![PyPI](https://img.shields.io/pypi/v/pepperize.cdk-vpc?style=flat-square)](https://pypi.org/project/pepperize.cdk-vpc/)
 [![Nuget](https://img.shields.io/nuget/v/Pepperize.CDK.Vpc?style=flat-square)](https://www.nuget.org/packages/Pepperize.CDK.Vpc/)
+[![Sonatype Nexus (Releases)](https://img.shields.io/nexus/r/com.pepperize/cdk-vpc?server=https%3A%2F%2Fs01.oss.sonatype.org%2F&style=flat-square)](https://s01.oss.sonatype.org/content/repositories/releases/com/pepperize/cdk-vpc/)
 [![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/pepperize/cdk-vpc/release/main?label=release&style=flat-square)](https://github.com/pepperize/cdk-vpc/actions/workflows/release.yml)
 [![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/pepperize/cdk-vpc?sort=semver&style=flat-square)](https://github.com/pepperize/cdk-vpc/releases)
 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod&style=flat-square)](https://gitpod.io/#https://github.com/pepperize/cdk-vpc)
@@ -37,6 +38,16 @@ pip install pepperize.cdk-vpc
 
 ```shell
 dotnet add package Pepperize.CDK.Vpc
+```
+
+### Java
+
+```xml
+<dependency>
+  <groupId>com.pepperize</groupId>
+  <artifactId>cdk-vpc</artifactId>
+  <version>${cdkVpc.version}</version>
+</dependency>
 ```
 
 ## Getting Started
