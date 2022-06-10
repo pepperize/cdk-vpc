@@ -687,9 +687,9 @@
   integrity sha512-T8TbSnGsxo6TDBJx/Sgv/BlVJL3tshxZP7Aq5R1mSnM5OcHY2dQaxLMu2+E8u3gN0MLOzdjurqN4ZRVuzQycOQ==
 
 "@pepperize/projen-awscdk-construct@latest":
-  version "0.0.133"
-  resolved "https://registry.yarnpkg.com/@pepperize/projen-awscdk-construct/-/projen-awscdk-construct-0.0.133.tgz#38c4942421b885413863091666f60b1c3bf7f3f2"
-  integrity sha512-N1pCdR5Pnfj38pcgUslolF+8ktf0CXkjPcg1YMHjsIUCN0lsn0vFHleZPF6usYPuY+cAs08V2u4lB7FE8jI52A==
+  version "0.0.134"
+  resolved "https://registry.yarnpkg.com/@pepperize/projen-awscdk-construct/-/projen-awscdk-construct-0.0.134.tgz#d409726dc9c3f0dfbe55f796c96b9abc996c8a7d"
+  integrity sha512-TM1acuvZFFPGIAhmF/M3XrGrqeXZ3xvAftC2HuEby3HM58Sj4lhyt7yoWPzNQbgf7YzfUb/txoxlZX8wTNsWNw==
   dependencies:
     projen "^0.50.33"
 
@@ -751,9 +751,9 @@
   integrity sha512-XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A==
 
 "@types/aws-lambda@^8.10.93":
-  version "8.10.99"
-  resolved "https://registry.yarnpkg.com/@types/aws-lambda/-/aws-lambda-8.10.99.tgz#14fb91e5ee54d517f5b3209b027edddee9900ba6"
-  integrity sha512-BLlr4HGGF9Ga5vvZumpuXuyFUIhnCZsOdjPWy/iCJi+NIYAw30jA3XC5tyVf2RfaXm5thMR2SC3DosDVIMhM5g==
+  version "8.10.100"
+  resolved "https://registry.yarnpkg.com/@types/aws-lambda/-/aws-lambda-8.10.100.tgz#31442a71c09e0ef08e41b7342d62cf374fa268df"
+  integrity sha512-Qldp1LhbgQ4tEHewci0/q5qVRaDr8ylvsYfpitJ+FFixzAHpgitvM2NM449uYWt2tYo/iJy25aSRRUVvwIT+ng==
 
 "@types/babel__core@^7.0.0", "@types/babel__core@^7.1.14":
   version "7.1.19"
