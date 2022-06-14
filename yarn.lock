@@ -687,9 +687,9 @@
   integrity sha512-T8TbSnGsxo6TDBJx/Sgv/BlVJL3tshxZP7Aq5R1mSnM5OcHY2dQaxLMu2+E8u3gN0MLOzdjurqN4ZRVuzQycOQ==
 
 "@pepperize/projen-awscdk-construct@latest":
-  version "0.0.134"
-  resolved "https://registry.yarnpkg.com/@pepperize/projen-awscdk-construct/-/projen-awscdk-construct-0.0.134.tgz#d409726dc9c3f0dfbe55f796c96b9abc996c8a7d"
-  integrity sha512-TM1acuvZFFPGIAhmF/M3XrGrqeXZ3xvAftC2HuEby3HM58Sj4lhyt7yoWPzNQbgf7YzfUb/txoxlZX8wTNsWNw==
+  version "0.0.137"
+  resolved "https://registry.yarnpkg.com/@pepperize/projen-awscdk-construct/-/projen-awscdk-construct-0.0.137.tgz#d2836669936f2ece8cfae687b164fdf4c2a08d80"
+  integrity sha512-KZLivVrfoYXWaqZODeaRLeuIdp9Wu7F8sWO3fPmkW9kIS6O9h0ibW5rpSeCRSVKXkwOC0JH3aXIZ+Mxbhzvwdw==
   dependencies:
     projen "^0.50.33"
 
@@ -4983,9 +4983,9 @@ prettier-linter-helpers@^1.0.0:
     fast-diff "^1.1.2"
 
 prettier@^2.6.2:
-  version "2.6.2"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.6.2.tgz#e26d71a18a74c3d0f0597f55f01fb6c06c206032"
-  integrity sha512-PkUpF+qoXTqhOeWL9fu7As8LXsIUZ1WYaJiY/a7McAQzxjk82OF0tibkFXVCDImZtWxbvojFjerkiLb0/q8mew==
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.7.0.tgz#a4fdae07e5596c51c9857ea676cd41a0163879d6"
+  integrity sha512-nwoX4GMFgxoPC6diHvSwmK/4yU8FFH3V8XWtLQrbj4IBsK2pkYhG4kf/ljF/haaZ/aii+wNJqISrCDPgxGWDVQ==
 
 pretty-format@^27.0.0, pretty-format@^27.5.1:
   version "27.5.1"
