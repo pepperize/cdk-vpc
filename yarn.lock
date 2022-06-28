@@ -687,9 +687,9 @@
   integrity sha512-T8TbSnGsxo6TDBJx/Sgv/BlVJL3tshxZP7Aq5R1mSnM5OcHY2dQaxLMu2+E8u3gN0MLOzdjurqN4ZRVuzQycOQ==
 
 "@pepperize/projen-awscdk-construct@latest":
-  version "0.0.145"
-  resolved "https://registry.yarnpkg.com/@pepperize/projen-awscdk-construct/-/projen-awscdk-construct-0.0.145.tgz#73fbd515453b8336cd0a32b6100bbd073a42f555"
-  integrity sha512-m46m/Gowm9kXnJFMsdLzZxRNh2hTBcBTmbPwbU9wVaK15OhWd2igH3aXRz48M7mD/ookDMkpUHwN9AS+5wU9Yg==
+  version "0.0.148"
+  resolved "https://registry.yarnpkg.com/@pepperize/projen-awscdk-construct/-/projen-awscdk-construct-0.0.148.tgz#29b36555e2152279819714ca8ad6302849eae383"
+  integrity sha512-U2oLg+kbYY5aLQKUzleDrLBULYh6ucp+UO+lrKiZdKXJa1zfnLxwnTyUCnItlMs1HyGJ1cyyBLTjb59ivBVUbQ==
   dependencies:
     projen "^0.50.33"
 
@@ -871,9 +871,9 @@
   integrity sha512-ReVR2rLTV1kvtlWFyuot+d1pkpG2Fw/XKE3PDAdj57rbM97ttSp9JZ2UsP+2EHTylra9cUf6JA7tGwW1INzUrA==
 
 "@types/sinon@^10.0.11":
-  version "10.0.11"
-  resolved "https://registry.yarnpkg.com/@types/sinon/-/sinon-10.0.11.tgz#8245827b05d3fc57a6601bd35aee1f7ad330fc42"
-  integrity sha512-dmZsHlBsKUtBpHriNjlK0ndlvEh8dcb9uV9Afsbt89QIyydpC7NcR+nWlAhASfy3GHnxTl4FX/aKE7XZUt/B4g==
+  version "10.0.12"
+  resolved "https://registry.yarnpkg.com/@types/sinon/-/sinon-10.0.12.tgz#fb7009ea71f313a9da4644ba73b94e44d6b84f7f"
+  integrity sha512-uWf4QJ4oky/GckJ1MYQxU52cgVDcXwBhDkpvLbi4EKoLPqLE4MOH6T/ttM33l3hi0oZ882G6oIzWv/oupRYSxQ==
   dependencies:
     "@types/sinonjs__fake-timers" "*"
 
