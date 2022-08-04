@@ -751,7 +751,7 @@ Adds or overwrites only the specified tags for the specified Amazon EC2 resource
 
 When you specify an existing tag key, the value is overwritten with the new value. Each resource can have a maximum of 50 tags. Each tag consists of a key and optional value. Tag keys must be unique per resource.
 
-> [[object Object],[object Object]]([object Object],[object Object])
+> [https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html)
 
 #### Initializer <a name="Initializer" id="@pepperize/cdk-vpc.CreateTagsProps.Initializer"></a>
 
@@ -783,7 +783,7 @@ The IDs of the ec2 resources, separated by spaces.
 
 Constraints: Up to 1000 resource IDs. We recommend breaking up this request into smaller batches.
 
-> [[object Object],[object Object]]([object Object],[object Object])
+> [https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#tag-resources](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#tag-resources)
 
 ---
 
