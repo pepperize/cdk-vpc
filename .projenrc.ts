@@ -1,18 +1,18 @@
-const { AwsCdkConstructLibrary } = require("@pepperize/projen-awscdk-construct");
-const { awscdk, javascript } = require("projen");
+import { AwsCdkConstructLibrary } from "@pepperize/projen-awscdk-construct";
+import { javascript } from "projen";
 const project = new AwsCdkConstructLibrary({
   author: "Patrick Florek",
   authorAddress: "patrick.florek@gmail.com",
   cdkVersion: "2.1.0",
-  defaultReleaseBranch: "main",
   name: "@pepperize/cdk-vpc",
   description: "Utility constructs for tagging subnets or creating a cheaper vpc.",
+  keywords: ["AWS", "CDK", "EC2", "VPC", "NatGateway", "NatInstance", "Tag", "Subnet", "Utilities"],
   repositoryUrl: "https://github.com/pepperize/cdk-vpc.git",
 
-  keywords: ["AWS", "CDK", "EC2", "VPC", "NatGateway", "NatInstance", "Tag", "Subnet", "Utilities"],
+  projenrcTs: true,
 
   devDeps: [
-    "@pepperize/projen-awscdk-construct@latest",
+    "@pepperize/projen-awscdk-construct",
     "@types/aws-lambda",
     "@types/jest",
     "@types/sinon",
@@ -22,13 +22,7 @@ const project = new AwsCdkConstructLibrary({
     "sinon",
   ],
 
-  lambdaOptions: {
-    runtime: awscdk.LambdaRuntime.NODEJS_14_X,
-    bundlingOptions: {
-      sourcemap: true,
-    },
-  },
-
+  defaultReleaseBranch: "main",
   autoApproveUpgrades: true,
   autoApproveOptions: { allowedUsernames: ["pflorek", "dependabot[bot]"], secret: "GITHUB_TOKEN" },
   depsUpgradeOptions: {
@@ -57,14 +51,14 @@ const project = new AwsCdkConstructLibrary({
   gitpod: true,
 });
 
-project.gitpod.addCustomTask({
+project.tasks.tryFind("package:python")?.prependExec("pip3 install packaging");
+
+project.gitpod?.addCustomTask({
   name: "setup",
   init: "yarn install && npx projen build",
   command: "npx projen watch",
 });
 
-project.gitpod.addVscodeExtensions("dbaeumer.vscode-eslint");
-
-project.tasks.tryFind("package:python").prependExec("pip3 install packaging");
+project.gitpod?.addVscodeExtensions("dbaeumer.vscode-eslint");
 
 project.synth();

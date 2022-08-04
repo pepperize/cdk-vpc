@@ -39,7 +39,7 @@
     "organization": true
   },
   "devDependencies": {
-    "@pepperize/projen-awscdk-construct": "latest",
+    "@pepperize/projen-awscdk-construct": "^0.0.183",
     "@types/aws-lambda": "^8.10.93",
     "@types/jest": "^27.4.1",
     "@types/node": "^12",
@@ -65,7 +65,7 @@
     "json-schema": "^0.4.0",
     "npm-check-updates": "^12",
     "prettier": "^2.6.2",
-    "projen": "^0.54.7",
+    "projen": "^0.60.16",
     "sinon": "^13.0.1",
     "standard-version": "^9",
     "ts-jest": "^27.1.4",
