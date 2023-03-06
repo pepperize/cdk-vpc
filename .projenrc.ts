@@ -23,14 +23,6 @@ const project = new AwsCdkConstructLibrary({
   ],
 
   defaultReleaseBranch: "main",
-  autoApproveUpgrades: true,
-  autoApproveOptions: { allowedUsernames: ["pflorek", "dependabot[bot]"], secret: "GITHUB_TOKEN" },
-  depsUpgradeOptions: {
-    workflowOptions: {
-      secret: "PROJEN_GITHUB_TOKEN",
-    },
-  },
-
   releaseToNpm: true,
   npmAccess: javascript.NpmAccess.PUBLIC,
   publishToNuget: {
