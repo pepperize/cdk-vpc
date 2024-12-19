@@ -12,7 +12,7 @@ const project = new AwsCdkConstructLibrary({
   projenrcTs: true,
 
   devDeps: [
-    "@pepperize/projen-awscdk-construct",
+    "@pepperize/projen-awscdk-construct@~0.0.730",
     "@types/aws-lambda",
     "@types/jest",
     "@types/sinon",
