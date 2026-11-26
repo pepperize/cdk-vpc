@@ -43,6 +43,8 @@ new CheapVpc(scope: Construct, id: string, props?: VpcProps)
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@pepperize/cdk-vpc.CheapVpc.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#@pepperize/cdk-vpc.CheapVpc.with">with</a></code> | Applies one or more mixins to this construct. |
+| <code><a href="#@pepperize/cdk-vpc.CheapVpc.applyCrossStackReferenceStrength">applyCrossStackReferenceStrength</a></code> | Override the cross-stack reference strength for this resource. |
 | <code><a href="#@pepperize/cdk-vpc.CheapVpc.applyRemovalPolicy">applyRemovalPolicy</a></code> | Apply the given removal policy to this resource. |
 | <code><a href="#@pepperize/cdk-vpc.CheapVpc.addClientVpnEndpoint">addClientVpnEndpoint</a></code> | Adds a new client VPN endpoint to this VPC. |
 | <code><a href="#@pepperize/cdk-vpc.CheapVpc.addFlowLog">addFlowLog</a></code> | Adds a new flow log to this VPC. |
@@ -61,6 +63,47 @@ public toString(): string
 ```
 
 Returns a string representation of this construct.
+
+##### `with` <a name="with" id="@pepperize/cdk-vpc.CheapVpc.with"></a>
+
+```typescript
+public with(mixins: ...IMixin[]): IConstruct
+```
+
+Applies one or more mixins to this construct.
+
+Mixins are applied in order. The list of constructs is captured at the
+start of the call, so constructs added by a mixin will not be visited.
+Use multiple `with()` calls if subsequent mixins should apply to added
+constructs.
+
+###### `mixins`<sup>Required</sup> <a name="mixins" id="@pepperize/cdk-vpc.CheapVpc.with.parameter.mixins"></a>
+
+- *Type:* ...constructs.IMixin[]
+
+---
+
+##### `applyCrossStackReferenceStrength` <a name="applyCrossStackReferenceStrength" id="@pepperize/cdk-vpc.CheapVpc.applyCrossStackReferenceStrength"></a>
+
+```typescript
+public applyCrossStackReferenceStrength(strength: ReferenceStrength): void
+```
+
+Override the cross-stack reference strength for this resource.
+
+When set, any cross-stack reference to this resource will use the specified
+mechanism instead of the global default determined by the
+`@aws-cdk/core:defaultCrossStackReferences` context key. This is useful for
+selectively weakening specific references to avoid the "deadly embrace" problem
+without changing the app-wide default.
+
+###### `strength`<sup>Required</sup> <a name="strength" id="@pepperize/cdk-vpc.CheapVpc.applyCrossStackReferenceStrength.parameter.strength"></a>
+
+- *Type:* aws-cdk-lib.ReferenceStrength
+
+The reference strength to use for this resource.
+
+---
 
 ##### `applyRemovalPolicy` <a name="applyRemovalPolicy" id="@pepperize/cdk-vpc.CheapVpc.applyRemovalPolicy"></a>
 
@@ -217,13 +260,14 @@ Returns IDs of selected subnets.
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@pepperize/cdk-vpc.CheapVpc.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#@pepperize/cdk-vpc.CheapVpc.isOwnedResource">isOwnedResource</a></code> | Returns true if the construct was created by CDK, and false otherwise. |
 | <code><a href="#@pepperize/cdk-vpc.CheapVpc.isResource">isResource</a></code> | Check whether the given construct is a Resource. |
-| <code><a href="#@pepperize/cdk-vpc.CheapVpc.fromLookup">fromLookup</a></code> | Import an existing VPC from by querying the AWS environment this stack is deployed to. |
+| <code><a href="#@pepperize/cdk-vpc.CheapVpc.fromLookup">fromLookup</a></code> | Import an existing VPC by querying the AWS environment this stack is deployed to. |
 | <code><a href="#@pepperize/cdk-vpc.CheapVpc.fromVpcAttributes">fromVpcAttributes</a></code> | Import a VPC by supplying all attributes directly. |
 
 ---
 
-##### ~~`isConstruct`~~ <a name="isConstruct" id="@pepperize/cdk-vpc.CheapVpc.isConstruct"></a>
+##### `isConstruct` <a name="isConstruct" id="@pepperize/cdk-vpc.CheapVpc.isConstruct"></a>
 
 ```typescript
 import { CheapVpc } from '@pepperize/cdk-vpc'
@@ -233,11 +277,41 @@ CheapVpc.isConstruct(x: any)
 
 Checks if `x` is a construct.
 
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
+
 ###### `x`<sup>Required</sup> <a name="x" id="@pepperize/cdk-vpc.CheapVpc.isConstruct.parameter.x"></a>
 
 - *Type:* any
 
 Any object.
+
+---
+
+##### `isOwnedResource` <a name="isOwnedResource" id="@pepperize/cdk-vpc.CheapVpc.isOwnedResource"></a>
+
+```typescript
+import { CheapVpc } from '@pepperize/cdk-vpc'
+
+CheapVpc.isOwnedResource(construct: IConstruct)
+```
+
+Returns true if the construct was created by CDK, and false otherwise.
+
+###### `construct`<sup>Required</sup> <a name="construct" id="@pepperize/cdk-vpc.CheapVpc.isOwnedResource.parameter.construct"></a>
+
+- *Type:* constructs.IConstruct
 
 ---
 
@@ -265,7 +339,7 @@ import { CheapVpc } from '@pepperize/cdk-vpc'
 CheapVpc.fromLookup(scope: Construct, id: string, options: VpcLookupOptions)
 ```
 
-Import an existing VPC from by querying the AWS environment this stack is deployed to.
+Import an existing VPC by querying the AWS environment this stack is deployed to.
 
 This function only needs to be used to use VPCs not defined in your CDK
 application. If you are looking to share a VPC between stacks, you can
@@ -340,13 +414,12 @@ Prefer to use `Vpc.fromLookup()` instead.
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@pepperize/cdk-vpc.CheapVpc.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
-| <code><a href="#@pepperize/cdk-vpc.CheapVpc.property.env">env</a></code> | <code>aws-cdk-lib.ResourceEnvironment</code> | The environment this resource belongs to. |
+| <code><a href="#@pepperize/cdk-vpc.CheapVpc.property.env">env</a></code> | <code>aws-cdk-lib.interfaces.ResourceEnvironment</code> | The environment this resource belongs to. |
 | <code><a href="#@pepperize/cdk-vpc.CheapVpc.property.stack">stack</a></code> | <code>aws-cdk-lib.Stack</code> | The stack in which this resource is defined. |
 | <code><a href="#@pepperize/cdk-vpc.CheapVpc.property.availabilityZones">availabilityZones</a></code> | <code>string[]</code> | AZs for this VPC. |
 | <code><a href="#@pepperize/cdk-vpc.CheapVpc.property.dnsHostnamesEnabled">dnsHostnamesEnabled</a></code> | <code>boolean</code> | Indicates if instances launched in this VPC will have public DNS hostnames. |
 | <code><a href="#@pepperize/cdk-vpc.CheapVpc.property.dnsSupportEnabled">dnsSupportEnabled</a></code> | <code>boolean</code> | Indicates if DNS support is enabled for this VPC. |
 | <code><a href="#@pepperize/cdk-vpc.CheapVpc.property.internetConnectivityEstablished">internetConnectivityEstablished</a></code> | <code>constructs.IDependable</code> | Dependencies for internet connectivity. |
-| <code><a href="#@pepperize/cdk-vpc.CheapVpc.property.internetGatewayId">internetGatewayId</a></code> | <code>string</code> | Internet Gateway for the VPC. |
 | <code><a href="#@pepperize/cdk-vpc.CheapVpc.property.isolatedSubnets">isolatedSubnets</a></code> | <code>aws-cdk-lib.aws_ec2.ISubnet[]</code> | List of isolated subnets in this VPC. |
 | <code><a href="#@pepperize/cdk-vpc.CheapVpc.property.privateSubnets">privateSubnets</a></code> | <code>aws-cdk-lib.aws_ec2.ISubnet[]</code> | List of private subnets in this VPC. |
 | <code><a href="#@pepperize/cdk-vpc.CheapVpc.property.publicSubnets">publicSubnets</a></code> | <code>aws-cdk-lib.aws_ec2.ISubnet[]</code> | List of public subnets in this VPC. |
@@ -357,6 +430,8 @@ Prefer to use `Vpc.fromLookup()` instead.
 | <code><a href="#@pepperize/cdk-vpc.CheapVpc.property.vpcDefaultSecurityGroup">vpcDefaultSecurityGroup</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@pepperize/cdk-vpc.CheapVpc.property.vpcId">vpcId</a></code> | <code>string</code> | Identifier for this VPC. |
 | <code><a href="#@pepperize/cdk-vpc.CheapVpc.property.vpcIpv6CidrBlocks">vpcIpv6CidrBlocks</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@pepperize/cdk-vpc.CheapVpc.property.vpcRef">vpcRef</a></code> | <code>aws-cdk-lib.interfaces.aws_ec2.VPCReference</code> | A reference to a VPC resource. |
+| <code><a href="#@pepperize/cdk-vpc.CheapVpc.property.internetGatewayId">internetGatewayId</a></code> | <code>string</code> | Internet Gateway for the VPC. |
 | <code><a href="#@pepperize/cdk-vpc.CheapVpc.property.vpnGatewayId">vpnGatewayId</a></code> | <code>string</code> | Returns the id of the VPN Gateway (if enabled). |
 
 ---
@@ -379,16 +454,17 @@ The tree node.
 public readonly env: ResourceEnvironment;
 ```
 
-- *Type:* aws-cdk-lib.ResourceEnvironment
+- *Type:* aws-cdk-lib.interfaces.ResourceEnvironment
 
 The environment this resource belongs to.
 
-For resources that are created and managed by the CDK
-(generally, those created by creating new class instances like Role, Bucket, etc.),
-this is always the same as the environment of the stack they belong to;
-however, for imported resources
-(those obtained from static methods like fromRoleArn, fromBucketName, etc.),
-that might be different than the stack they were imported into.
+For resources that are created and managed in a Stack (those created by
+creating new class instances like `new Role()`, `new Bucket()`, etc.), this
+is always the same as the environment of the stack they belong to.
+
+For referenced resources (those obtained from referencing methods like
+`Role.fromRoleArn()`, `Bucket.fromBucketName()`, etc.), they might be
+different than the stack they were imported into.
 
 ---
 
@@ -449,21 +525,6 @@ public readonly internetConnectivityEstablished: IDependable;
 - *Type:* constructs.IDependable
 
 Dependencies for internet connectivity.
-
----
-
-##### `internetGatewayId`<sup>Optional</sup> <a name="internetGatewayId" id="@pepperize/cdk-vpc.CheapVpc.property.internetGatewayId"></a>
-
-```typescript
-public readonly internetGatewayId: string;
-```
-
-- *Type:* string
-
-Internet Gateway for the VPC.
-
-Note that in case the VPC is configured only
-with ISOLATED subnets, this attribute will be `undefined`.
 
 ---
 
@@ -579,6 +640,33 @@ public readonly vpcIpv6CidrBlocks: string[];
 
 ---
 
+##### `vpcRef`<sup>Required</sup> <a name="vpcRef" id="@pepperize/cdk-vpc.CheapVpc.property.vpcRef"></a>
+
+```typescript
+public readonly vpcRef: VPCReference;
+```
+
+- *Type:* aws-cdk-lib.interfaces.aws_ec2.VPCReference
+
+A reference to a VPC resource.
+
+---
+
+##### `internetGatewayId`<sup>Optional</sup> <a name="internetGatewayId" id="@pepperize/cdk-vpc.CheapVpc.property.internetGatewayId"></a>
+
+```typescript
+public readonly internetGatewayId: string;
+```
+
+- *Type:* string
+
+Internet Gateway for the VPC.
+
+Note that in case the VPC is configured only
+with ISOLATED subnets, this attribute will be `undefined`.
+
+---
+
 ##### `vpnGatewayId`<sup>Optional</sup> <a name="vpnGatewayId" id="@pepperize/cdk-vpc.CheapVpc.property.vpnGatewayId"></a>
 
 ```typescript
@@ -598,6 +686,7 @@ Returns the id of the VPN Gateway (if enabled).
 | <code><a href="#@pepperize/cdk-vpc.CheapVpc.property.DEFAULT_CIDR_RANGE">DEFAULT_CIDR_RANGE</a></code> | <code>string</code> | The default CIDR range used when creating VPCs. |
 | <code><a href="#@pepperize/cdk-vpc.CheapVpc.property.DEFAULT_SUBNETS">DEFAULT_SUBNETS</a></code> | <code>aws-cdk-lib.aws_ec2.SubnetConfiguration[]</code> | The default subnet configuration. |
 | <code><a href="#@pepperize/cdk-vpc.CheapVpc.property.DEFAULT_SUBNETS_NO_NAT">DEFAULT_SUBNETS_NO_NAT</a></code> | <code>aws-cdk-lib.aws_ec2.SubnetConfiguration[]</code> | The default subnet configuration if natGateways specified to be 0. |
+| <code><a href="#@pepperize/cdk-vpc.CheapVpc.property.PROPERTY_INJECTION_ID">PROPERTY_INJECTION_ID</a></code> | <code>string</code> | Uniquely identifies this class. |
 
 ---
 
@@ -613,6 +702,8 @@ The default CIDR range used when creating VPCs.
 
 This can be overridden using VpcProps when creating a VPCNetwork resource.
 e.g. new VpcResource(this, { cidr: '192.168.0.0./16' })
+
+Note this is specific to the IPv4 CIDR.
 
 ---
 
@@ -641,6 +732,18 @@ public readonly DEFAULT_SUBNETS_NO_NAT: SubnetConfiguration[];
 The default subnet configuration if natGateways specified to be 0.
 
 1 Public and 1 Isolated Subnet per AZ evenly split
+
+---
+
+##### `PROPERTY_INJECTION_ID`<sup>Required</sup> <a name="PROPERTY_INJECTION_ID" id="@pepperize/cdk-vpc.CheapVpc.property.PROPERTY_INJECTION_ID"></a>
+
+```typescript
+public readonly PROPERTY_INJECTION_ID: string;
+```
+
+- *Type:* string
+
+Uniquely identifies this class.
 
 ---
 
@@ -685,6 +788,7 @@ new CreateTags(scope: Construct, id: string, props: CreateTagsProps)
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@pepperize/cdk-vpc.CreateTags.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#@pepperize/cdk-vpc.CreateTags.with">with</a></code> | Applies one or more mixins to this construct. |
 
 ---
 
@@ -696,6 +800,27 @@ public toString(): string
 
 Returns a string representation of this construct.
 
+##### `with` <a name="with" id="@pepperize/cdk-vpc.CreateTags.with"></a>
+
+```typescript
+public with(mixins: ...IMixin[]): IConstruct
+```
+
+Applies one or more mixins to this construct.
+
+Mixins are applied in order. The list of constructs is captured at the
+start of the call, so constructs added by a mixin will not be visited.
+Use multiple `with()` calls if subsequent mixins should apply to added
+constructs.
+
+###### `mixins`<sup>Required</sup> <a name="mixins" id="@pepperize/cdk-vpc.CreateTags.with.parameter.mixins"></a>
+
+- *Type:* ...constructs.IMixin[]
+
+The mixins to apply.
+
+---
+
 #### Static Functions <a name="Static Functions" id="Static Functions"></a>
 
 | **Name** | **Description** |
@@ -704,7 +829,7 @@ Returns a string representation of this construct.
 
 ---
 
-##### ~~`isConstruct`~~ <a name="isConstruct" id="@pepperize/cdk-vpc.CreateTags.isConstruct"></a>
+##### `isConstruct` <a name="isConstruct" id="@pepperize/cdk-vpc.CreateTags.isConstruct"></a>
 
 ```typescript
 import { CreateTags } from '@pepperize/cdk-vpc'
@@ -713,6 +838,20 @@ CreateTags.isConstruct(x: any)
 ```
 
 Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
 
 ###### `x`<sup>Required</sup> <a name="x" id="@pepperize/cdk-vpc.CreateTags.isConstruct.parameter.x"></a>
 

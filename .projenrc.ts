@@ -3,16 +3,25 @@ import { javascript } from "projen";
 const project = new AwsCdkConstructLibrary({
   author: "Patrick Florek",
   authorAddress: "patrick.florek@gmail.com",
-  cdkVersion: "2.1.0",
+  cdkVersion: "2.278.0",
+  jsiiVersion: "~6.0.0",
   name: "@pepperize/cdk-vpc",
   description: "Utility constructs for tagging subnets or creating a cheaper vpc.",
   keywords: ["AWS", "CDK", "EC2", "VPC", "NatGateway", "NatInstance", "Tag", "Subnet", "Utilities"],
   repositoryUrl: "https://github.com/pepperize/cdk-vpc.git",
 
   projenrcTs: true,
+  minNodeVersion: "22.13.0",
+  workflowNodeVersion: "24.x",
+  jestOptions: {
+    jestVersion: "^30",
+  },
+  packageManager: javascript.NodePackageManager.YARN_CLASSIC,
 
   devDeps: [
-    "@pepperize/projen-awscdk-construct@~0.0.730",
+    "@pepperize/projen-awscdk-construct@~0.1.1",
+    "@types/node@^22",
+    "typescript@~6.0",
     "@types/aws-lambda",
     "@types/jest",
     "@types/sinon",
@@ -34,7 +43,6 @@ const project = new AwsCdkConstructLibrary({
     module: "pepperize_cdk_vpc",
   },
   publishToMaven: {
-    mavenEndpoint: "https://s01.oss.sonatype.org",
     mavenGroupId: "com.pepperize",
     mavenArtifactId: "cdk-vpc",
     javaPackage: "com.pepperize.cdk.vpc",
