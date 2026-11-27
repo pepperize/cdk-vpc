@@ -4,6 +4,8 @@
 
 ### CheapVpc <a name="CheapVpc" id="@pepperize/cdk-vpc.CheapVpc"></a>
 
+- *Implements:* constructs.IConstruct, constructs.IDependable, aws-cdk-lib.IResource, aws-cdk-lib.interfaces.IEnvironmentAware, aws-cdk-lib.aws_ec2.IVpc, aws-cdk-lib.interfaces.aws_ec2.IVPCRef
+
 #### Initializers <a name="Initializers" id="@pepperize/cdk-vpc.CheapVpc.Initializer"></a>
 
 ```typescript
@@ -748,6 +750,8 @@ Uniquely identifies this class.
 ---
 
 ### CreateTags <a name="CreateTags" id="@pepperize/cdk-vpc.CreateTags"></a>
+
+- *Implements:* constructs.IConstruct, constructs.IDependable
 
 #### Initializers <a name="Initializers" id="@pepperize/cdk-vpc.CreateTags.Initializer"></a>
 
